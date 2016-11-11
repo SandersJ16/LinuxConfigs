@@ -26,6 +26,7 @@ alias unmount='sudo umount'
 alias unmountwindows='cd ~ && sudo umount /media/$USER/windows && back'
 alias windows='. windows'
 
+alias searchtext='grep -nr . --exclude-dir=".tags"  -Pe'
 
 alias python='python3'
 alias pyunit='python -m unittest'
@@ -61,5 +62,5 @@ alias checknetwork='arp -a'
 alias version='lsb_release -a'
 alias changejava='sudo update-alternatives --config java'
 
-alias wifi='sudo iwlist eth1 scan| grep --color=always "ESSID: *"|sort|uniq'
+alias wifi='sudo iwlist wlp4s0 scan| grep --color=always "ESSID: *"|sort|uniq'
 alias espeak='espeak -ven-us+f3 -s 140'
