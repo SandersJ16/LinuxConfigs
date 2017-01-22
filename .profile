@@ -21,6 +21,14 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+
+export RBENV_ROOT="/opt/rbenv/"
+
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
