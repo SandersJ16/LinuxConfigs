@@ -21,6 +21,11 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export NPM_CONFIG_PREFIX="/opt/npm/"
+
+if [ -d "${NPM_CONFIG_PREFIX}" ]; then
+  export PATH="${NPM_CONFIG_PREFIX}/bin:${PATH}"
+fi
 
 export RBENV_ROOT="/opt/rbenv/"
 

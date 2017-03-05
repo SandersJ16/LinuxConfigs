@@ -17,6 +17,7 @@ alias chmod='chmod -v'
 
 alias cp='cp -ivr'
 alias mv='mv -iv'
+alias rm='rm -Iv'
 
 alias sources='source ~/.bashrc'
 alias aliases='less ~/.bash_aliases'
