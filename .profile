@@ -27,12 +27,30 @@ if [ -d "${NPM_CONFIG_PREFIX}" ]; then
   export PATH="${NPM_CONFIG_PREFIX}/bin:${PATH}"
 fi
 
+# Add RBENV to path and setup shims and autocomplete
 export RBENV_ROOT="/opt/rbenv/"
 
 if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
+
+# Add PHPENV to path and setup shims and autocomplete
+export PHPENV_ROOT="/opt/phpenv/"
+
+if [ -d "${PHPENV_ROOT}" ]; then
+  export PATH="${PHPENV_ROOT}/bin:${PATH}"
+  eval "$(phpenv init -)"
+fi
+
+# Add PYENV to path and setup shims and autocomplete
+export PYENV_ROOT="/opt/pyenv/"
+
+if [ -d "${PYENV_ROOT}" ]; then
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+  eval "$(pyenv init -)"
+fi
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
