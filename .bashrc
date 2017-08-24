@@ -120,3 +120,13 @@ fi
 #export https_proxy=''
 #export ftp_proxy=''
 #export socks_proxy=''
+
+if [ -d "${RBENV_ROOT}" ]; then
+  source "${RBENV_ROOT}/completions/rbenv.bash"
+fi
+if [ -d "${PHPENV_ROOT}" ]; then
+  source "${PHPENV_ROOT}/completions/phpenv.bash"
+fi
+if [ -d "${PYENV_ROOT}" ]; then
+  source "${PYENV_ROOT}/completions/pyenv.bash"
+fi
