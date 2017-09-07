@@ -13,14 +13,6 @@ if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
-
 export NPM_CONFIG_PREFIX="/opt/npm"
 
 if [ -d "${NPM_CONFIG_PREFIX}" ]; then
@@ -32,7 +24,6 @@ export RBENV_ROOT="/opt/rbenv"
 
 if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
-  eval "$(rbenv init -)"
 fi
 
 # Add PHPENV to path and setup shims and autocomplete
@@ -40,7 +31,6 @@ export PHPENV_ROOT="/opt/phpenv"
 
 if [ -d "${PHPENV_ROOT}" ]; then
   export PATH="${PHPENV_ROOT}/bin:${PATH}"
-  eval "$(phpenv init -)"
 fi
 
 # Add PYENV to path and setup shims and autocomplete
@@ -48,9 +38,15 @@ export PYENV_ROOT="/opt/pyenv"
 
 if [ -d "${PYENV_ROOT}" ]; then
   export PATH="${PYENV_ROOT}/bin:${PATH}"
-  eval "$(pyenv init -)"
 fi
 
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
@@ -62,4 +58,5 @@ if [ -d "$HOME/Code/bin" ] ; then
 fi
 
 export GIMP2_DIRECTORY="$HOME/.config/gimp"
+
 

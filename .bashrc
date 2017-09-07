@@ -121,12 +121,39 @@ fi
 #export ftp_proxy=''
 #export socks_proxy=''
 
+extract () {
+     if [ -f $1 ] ; then
+         case $1 in
+             *.tar.bz2)   tar xjf $1        ;;
+             *.tar.gz)    tar xzf $1     ;;
+             *.bz2)       bunzip2 $1       ;;
+             *.rar)       rar x $1     ;;
+             *.gz)        gunzip $1     ;;
+             *.tar)       tar xf $1        ;;
+             *.tbz2)      tar xjf $1      ;;
+             *.tgz)       tar xzf $1       ;;
+             *.zip)       unzip $1     ;;
+             *.Z)         uncompress $1  ;;
+             *.7z)        7z x $1    ;;
+             *)           echo "'$1' cannot be extracted via extract()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
+
 if [ -d "${RBENV_ROOT}" ]; then
+  eval "$(rbenv init -)"
   source "${RBENV_ROOT}/completions/rbenv.bash"
 fi
 if [ -d "${PHPENV_ROOT}" ]; then
+  eval "$(phpenv init -)"
   source "${PHPENV_ROOT}/completions/phpenv.bash"
 fi
 if [ -d "${PYENV_ROOT}" ]; then
+  eval "$(pyenv init -)"
+  if [ -d "${PYENV_ROOT}/plugins/pyenv-virtualenv" ]; then
+    eval "$(pyenv virtualenv-init -)"
+  fi
   source "${PYENV_ROOT}/completions/pyenv.bash"
 fi
