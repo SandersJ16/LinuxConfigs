@@ -5,10 +5,11 @@ syntax on          " turn on Syntax highlighting by default
 "+xterm_clipboard must be installed (try installing vim-gnome if it's not"
 set clipboard=unnamedplus
 
-"Remap yaning to go to clipboard
+"Remap yanking to go to clipboard
 vnoremap <C-c> "*y
 "Make delete no longer copy to clipboard
-nnoremap d "_d 
+nnoremap d "_d
+nnoremap x "_x
 "Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
