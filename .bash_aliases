@@ -3,12 +3,14 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
+alias ........='cd ../../../../../../..'
 
 alias ls='ls --color=auto -XF --group-directories-first'
 alias lh='ls -AX | grep --color=always "^\." | grep --color=always "/\|" | ccolumn'
-alias ld='ls --color=always -AXp |grep --color=always "/" | ccolumn'
+alias ld='ls --color=always -Xp |grep --color=always "/" | ccolumn'
 alias lhd='ls -AX | grep --color=always "^\." | grep --color=always "/" | sort | ccolumn'
-alias ldh='lhd'
 
 alias tree='tree -L 2'
 alias ltree='tree -L 2 -C|less -R'
@@ -39,6 +41,9 @@ alias javac='javac -g'
 alias gcc='gcc -g -Wall -Wextra'
 alias g++='g++ --std=c++11 -g -Wall -Wextra'
 alias mysql='mysql -u root -p'
+
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias yarn-exec='PATH=$(yarn bin):$PATH'
 
 alias vlc='vlc --started-from-file --playlist-enqueue'
 
