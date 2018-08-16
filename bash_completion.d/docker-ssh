@@ -1,0 +1,16 @@
+_docker_ssh()
+{
+    local cur prev opts containers images
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    containers=($(docker container ps --format '{{.Names}}'))
+    images=($(docker image ls --format="{{.Repository}}:{{.Tag}}" --filter='dangling=false'))
+    opts=("${containers[@]}" "${images[@]}")
+
+    COMPREPLY=( $(compgen -W "${opts[*]}" -- ${cur}) )
+    return 0
+}
+complete -F _docker_ssh docker-ssh
+
