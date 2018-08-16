@@ -121,6 +121,9 @@ fi
 #export ftp_proxy=''
 #export socks_proxy=''
 
+# don't break on colons for autocomplete, added for autocompletion of docker-ssh
+COMP_WORDBREAKS=${COMP_WORDBREAKS//:}
+
 extract () {
      if [ -f $1 ] ; then
          case $1 in
