@@ -47,8 +47,8 @@ alias yarn-exec='PATH=$(yarn bin):$PATH'
 
 alias vlc='vlc --started-from-file --playlist-enqueue'
 
-alias install='sudo apt-get install'
-alias update='sudo apt-get update'
+alias install='sudo apt install'
+alias update='sudo apt update'
 
 alias back='cd $OLDPWD'
 alias Documents='cd ~/Documents'
@@ -77,4 +77,4 @@ alias changejava='sudo update-alternatives --config java'
 alias wifi='sudo iwlist wlp4s0 scan| grep --color=always "ESSID: *"|sort|uniq'
 alias espeak='espeak -ven-us+f3 -s 140'
 
-alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
+#alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
