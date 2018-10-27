@@ -11,6 +11,7 @@ alias ls='ls --color=auto -XF --group-directories-first'
 alias lh='ls -AX | grep --color=always "^\." | grep --color=always "/\|" | ccolumn'
 alias ld='ls --color=always -Xp |grep --color=always "/" | ccolumn'
 alias lhd='ls -AX | grep --color=always "^\." | grep --color=always "/" | sort | ccolumn'
+alias lss='ls -la | grep -oP --color=never "[\w.]+ -> /?[\w+.]+(/[\w+.]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
 
 alias tree='tree -L 2'
 alias ltree='tree -L 2 -C|less -R'
@@ -29,12 +30,8 @@ alias unmount='sudo umount'
 alias unmountwindows='cd ~ && sudo umount /media/$USER/windows && back'
 alias windows='. windows'
 
-#alias searchtext='grep -nr . 2>/dev/null -Pe'
-
 alias sublime='subl'
-#alias python='python3'
 alias pyunit='python -m unittest'
-#alias pyunit3='python3 -m unittest'
 alias haskell='ghci'
 
 alias javac='javac -g'
@@ -77,4 +74,4 @@ alias changejava='sudo update-alternatives --config java'
 alias wifi='sudo iwlist wlp4s0 scan| grep --color=always "ESSID: *"|sort|uniq'
 alias espeak='espeak -ven-us+f3 -s 140'
 
-#alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
+alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
