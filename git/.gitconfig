@@ -9,3 +9,7 @@
 
 [includeIf "gitdir:~/Code/Wellspring/**"]
     path = ~/Code/Wellspring/.gitconfig
+
+[core]
+    excludesfile = ~/.gitignore_global
+
