@@ -53,8 +53,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-if [ -d "$HOME/Code/bin" ] ; then
-    PATH="$HOME/Code/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 export GIMP2_DIRECTORY="$HOME/.config/gimp"

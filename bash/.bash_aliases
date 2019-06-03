@@ -8,8 +8,8 @@ alias .......='cd ../../../../../..'
 alias ........='cd ../../../../../../..'
 
 alias ls='ls --color=auto -XF --group-directories-first'
-alias lh='ls -AX | grep --color=always "^\." | grep --color=always "/\|" | ccolumn'
-alias ld='ls --color=always -Xp |grep --color=always "/" | ccolumn'
+alias lh='ls -AX | GREP_COLOR="01;36" grep -P "(?<=\.).+@|$" --color=always | grep --color=always "^\." | grep --color=always "/\|" | ccolumn'
+alias ld='ls --color=always -Xp | grep --color=always "/" | ccolumn'
 alias lhd='ls -AX | grep --color=always "^\." | grep --color=always "/" | sort | ccolumn'
 alias lss='ls -la | grep -oP --color=never "[\w.]+ -> /?[\w+.]+(/[\w+.]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
 
@@ -46,6 +46,7 @@ alias vlc='vlc --started-from-file --playlist-enqueue'
 
 alias install='sudo apt install'
 alias update='sudo apt update'
+alias remove='sudo apt remove'
 
 alias back='cd $OLDPWD'
 alias Documents='cd ~/Documents'
@@ -53,7 +54,6 @@ alias Downloads='cd ~/Downloads'
 alias Code='cd ~/Code'
 alias Pictures='cd ~/Pictures'
 alias Music='cd ~/Music'
-alias Scripts='cd ~/Code/Scripts'
 alias Videos='cd ~/Videos'
 alias Books='cd ~/Books'
 
