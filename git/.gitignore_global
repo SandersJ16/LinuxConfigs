@@ -1,6 +1,7 @@
 # Developer Tool/IDE Files #
 ############################
 .tags
+.php-version
 
 # Compiled source #
 ###################
