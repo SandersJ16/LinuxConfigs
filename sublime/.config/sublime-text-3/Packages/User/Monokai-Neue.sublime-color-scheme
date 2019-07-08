@@ -1,0 +1,51 @@
+{
+    // http://www.sublimetext.com/docs/3/color_schemes.html
+    "variables": {
+        // "green": "#FF0000",
+        "rainbow1": "#66D9EF",
+        "rainbow2": "#AE81FF",
+        "rainbow3": "#F92672",
+        "rainbow4": "#A6E22E",
+        "rainbow5": "#FD971F",
+        "rainbow6": "#FF69B4",
+        "rainbow7": "#66D9EF",
+    },
+    "globals": {
+        // "foreground": "var(green)",
+    },
+    "rules": [
+        //{
+            // "scope": "string",
+            // "foreground": "#00FF00",
+        //},
+        {
+            "scope": "source.json meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow1)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow2)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow3)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow4)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow5)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow6)",
+        },
+        {
+            "scope": "source.json meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping meta.mapping.key string - punctuation",
+            "foreground": "var(rainbow7)",
+        },
+
+    ],
+}
