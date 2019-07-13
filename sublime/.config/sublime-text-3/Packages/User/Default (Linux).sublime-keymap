@@ -3,8 +3,8 @@
     { "keys": ["alt+left"], "command": "focus_neighboring_group", "args": {"forward": false} },
     { "keys": ["alt+right"], "command": "focus_neighboring_group" },
     //Alt Super left and right move current pane to neighbouring
-    { "keys": ["alt+super+left"], "command": "move_to_neighboring_group", "args": {"forward": false} },
-    { "keys": ["alt+super+right"], "command": "move_to_neighboring_group" }
+    { "keys": ["alt+super+shift+left"], "command": "move_to_neighboring_group", "args": {"forward": false} },
+    { "keys": ["alt+super+shift+right"], "command": "move_to_neighboring_group" }
 
     //Change ctrl to make movement use subwords as well
     //{ "keys": ["ctrl+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
