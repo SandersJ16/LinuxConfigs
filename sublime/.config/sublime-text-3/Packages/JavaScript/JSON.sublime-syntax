@@ -26,51 +26,116 @@ contexts:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array1
     - include: object1
   value2:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array2
     - include: object2
   value3:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array3
     - include: object3
   value4:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array4
     - include: object4
   value5:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array5
     - include: object5
   value6:
     - include: constant
     - include: number
     - include: string
-    - include: array
+    - include: array6
     - include: object6
-  array:
+  array1:
     - match: '\['
-      scope: punctuation.section.sequence.begin.json
+      scope: punctuation.section.sequence.begin.1.json
       push:
-        - meta_scope: meta.sequence.json
+        - meta_scope: meta.sequence.1.json
         - match: '\]'
-          scope: punctuation.section.sequence.end.json
+          scope: punctuation.section.sequence.end.1.json
+          pop: true
+        - include: value2
+        - match: ","
+          scope: punctuation.separator.sequence.1.json
+        - match: '[^\s\]]'
+          scope: invalid.illegal.expected-sequence-separator.1.json
+  array2:
+    - match: '\['
+      scope: punctuation.section.sequence.begin.2.json
+      push:
+        - meta_scope: meta.sequence.2.json
+        - match: '\]'
+          scope: punctuation.section.sequence.end.2.json
+          pop: true
+        - include: value3
+        - match: ","
+          scope: punctuation.separator.sequence.2.json
+        - match: '[^\s\]]'
+          scope: invalid.illegal.expected-sequence-separator.2.json
+  array3:
+    - match: '\['
+      scope: punctuation.section.sequence.begin.3.json
+      push:
+        - meta_scope: meta.sequence.3.json
+        - match: '\]'
+          scope: punctuation.section.sequence.end.3.json
+          pop: true
+        - include: value4
+        - match: ","
+          scope: punctuation.separator.sequence.3.json
+        - match: '[^\s\]]'
+          scope: invalid.illegal.expected-sequence-separator.3.json
+  array4:
+    - match: '\['
+      scope: punctuation.section.sequence.begin.4.json
+      push:
+        - meta_scope: meta.sequence.4.json
+        - match: '\]'
+          scope: punctuation.section.sequence.end.4.json
+          pop: true
+        - include: value5
+        - match: ","
+          scope: punctuation.separator.sequence.4.json
+        - match: '[^\s\]]'
+          scope: invalid.illegal.expected-sequence-separator.4.json
+  array5:
+    - match: '\['
+      scope: punctuation.section.sequence.begin.5.json
+      push:
+        - meta_scope: meta.sequence.5.json
+        - match: '\]'
+          scope: punctuation.section.sequence.end.5.json
+          pop: true
+        - include: value6
+        - match: ","
+          scope: punctuation.separator.sequence.5.json
+        - match: '[^\s\]]'
+          scope: invalid.illegal.expected-sequence-separator.5.json
+  array6:
+    - match: '\['
+      scope: punctuation.section.sequence.begin.6.json
+      push:
+        - meta_scope: meta.sequence.6.json
+        - match: '\]'
+          scope: punctuation.section.sequence.end.6.json
           pop: true
         - include: value1
         - match: ","
-          scope: punctuation.separator.sequence.json
+          scope: punctuation.separator.sequence.6.json
         - match: '[^\s\]]'
-          scope: invalid.illegal.expected-sequence-separator.json
+          scope: invalid.illegal.expected-sequence-separator.6.json
   comments:
     - match: /\*\*(?!/)
       scope: punctuation.definition.comment.json

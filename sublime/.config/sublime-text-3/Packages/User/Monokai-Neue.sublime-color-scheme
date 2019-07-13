@@ -35,5 +35,31 @@
             "scope": "source.json meta.mapping.key.6 string - punctuation",
             "foreground": "var(rainbow6)",
         },
+
+
+        {
+            "scope": "source.json meta.sequence.1 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow3)",
+        },
+        {
+            "scope": "source.json meta.sequence.2 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow4)",
+        },
+        {
+            "scope": "source.json meta.sequence.3 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow5)",
+        },
+        {
+            "scope": "source.json meta.sequence.4 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow6)",
+        },
+        {
+            "scope": "source.json meta.sequence.5 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow1)",
+        },
+        {
+            "scope": "source.json meta.sequence.6 string - punctuation - meta.mapping.value.1 - meta.mapping.value.2 - meta.mapping.value.3 - meta.mapping.value.4 - meta.mapping.value.5 - meta.mapping.value.6",
+            "foreground": "var(rainbow2)",
+        },
     ],
 }
