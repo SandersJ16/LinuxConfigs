@@ -1,0 +1,15 @@
+[Default Applications]
+#PHP
+text/php=sublime_text.desktop
+text/x-php=sublime_text.desktop
+application/php=sublime_text.desktop
+application/x-php=sublime_text.desktop
+application/x-httpd-php=sublime_text.desktop
+application/x-httpd-php-source=sublime_text.desktop
+
+#JSON
+application/json=sublime_text.desktop
+application/x-javascript=sublime_text.desktop
+text/javascript=sublime_text.desktop
+text/x-javascript=sublime_text.desktop
+text/x-json=sublime_text.desktop
