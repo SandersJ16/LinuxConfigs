@@ -37,7 +37,6 @@ alias haskell='ghci'
 alias javac='javac -g'
 alias gcc='gcc -g -Wall -Wextra'
 alias g++='g++ --std=c++11 -g -Wall -Wextra'
-alias mysql='mysql -u root -p'
 
 alias npm-exec='PATH=$(npm bin):$PATH'
 alias yarn-exec='PATH=$(yarn bin):$PATH'
