@@ -1,4 +1,7 @@
 [Default Applications]
+#Text
+text/plain=sublime_text.desktop
+
 #PHP
 text/php=sublime_text.desktop
 text/x-php=sublime_text.desktop
@@ -13,3 +16,7 @@ application/x-javascript=sublime_text.desktop
 text/javascript=sublime_text.desktop
 text/x-javascript=sublime_text.desktop
 text/x-json=sublime_text.desktop
+
+#Python
+application/x-python-code=sublime_text.desktop
+text/x-python=sublime_text.desktop
