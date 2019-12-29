@@ -24,11 +24,13 @@ alias rm='rm -Iv'
 
 alias sources='source ~/.bashrc'
 alias aliases='less ~/.bash_aliases'
+alias gnomeextensioninstall='gnome-shell-extension-tool -e'
 
 alias umount='sudo umount'
 alias unmount='sudo umount'
 alias unmountwindows='cd ~ && sudo umount /media/$USER/windows && back'
 alias windows='. windows'
+alias gordon='smbclient //192.168.0.15/Media -Ujustin%'
 
 alias sublime='subl'
 alias pyunit='python -m unittest'
