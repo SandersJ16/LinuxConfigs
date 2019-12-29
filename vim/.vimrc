@@ -12,6 +12,8 @@ nnoremap d "_d
 nnoremap x "_x
 "Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+"Set shift+tab to be a literal tab character
+inoremap <S-Tab> <C-V><Tab>
 
 "Set Colour Scheme
 colorscheme slate
