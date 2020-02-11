@@ -10,10 +10,10 @@
 	"color_scheme": "Monokai.sublime-color-scheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 11,
-	// "ignored_packages":
-	// [
-	// 	"Vintage"
-	// ],
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"indent_to_bracket": true,
 	"show_encoding": true,
 	"show_full_path": true,

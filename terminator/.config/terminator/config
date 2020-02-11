@@ -6,6 +6,9 @@
 [keybindings]
   group_all = None
   group_all_toggle = <Super>g
+  help = <Primary>F1
+  page_down_half = Page_Down
+  page_up_half = Page_Up
 [layouts]
   [[default]]
     [[[child1]]]
