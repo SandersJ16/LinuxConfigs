@@ -160,3 +160,9 @@ if [ -d "${PYENV_ROOT}" ]; then
   fi
   source "${PYENV_ROOT}/completions/pyenv.bash"
 fi
+if [ -s "${NVM_ROOT}/nvm.sh" ]; then
+  source "${NVM_ROOT}/nvm.sh" # This loads nvm
+  if [[ -r "${NVM_ROOT}/bash_completion" ]]; then
+    source "${NVM_ROOT}/bash_completion"
+  fi
+fi

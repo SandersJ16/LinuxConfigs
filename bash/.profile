@@ -13,11 +13,9 @@ if [ "$TERM" == "xterm" ]; then
     export TERM=xterm-256color
 fi
 
-export NPM_CONFIG_PREFIX="/opt/npm"
 
-if [ -d "${NPM_CONFIG_PREFIX}" ]; then
-  export PATH="${NPM_CONFIG_PREFIX}/bin:${PATH}"
-fi
+# Specify NVM installation location
+export NVM_ROOT="/opt/nvm"
 
 # Add RBENV to path and setup shims and autocomplete
 export RBENV_ROOT="/opt/rbenv"
