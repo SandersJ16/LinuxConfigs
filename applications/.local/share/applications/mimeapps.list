@@ -14,6 +14,7 @@ application/x-httpd-php-source=sublime_text.desktop
 application/json=sublime_text.desktop
 application/x-javascript=sublime_text.desktop
 text/javascript=sublime_text.desktop
+text/x-java=sublime_text.desktop
 text/x-javascript=sublime_text.desktop
 text/x-json=sublime_text.desktop
 
