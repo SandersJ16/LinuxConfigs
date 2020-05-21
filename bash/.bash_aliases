@@ -9,8 +9,10 @@ alias ........='cd ../../../../../../..'
 
 alias ls='ls --color=auto -XF --group-directories-first'
 alias lh='ls -AX | GREP_COLOR="01;36" grep -P "(?<=\.).+@|$" --color=always | grep --color=always "^\." | grep --color=always "/\|" | ccolumn'
+alias lh='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | ccolumn'
 alias ld='ls --color=always -Xp | grep --color=always "/" | ccolumn'
-alias lhd='ls -AX | grep --color=always "^\." | grep --color=always "/" | sort | ccolumn'
+alias lhd='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | grep --color=no "/$" | ccolumn'
+alias lhf='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | grep -v --color=no "/$" | ccolumn'
 alias lss='ls -la | grep -oP --color=never "[\w.]+ -> /?[\w+.]+(/[\w+.]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
 
 alias tree='tree -L 2'
@@ -76,3 +78,5 @@ alias wifi='sudo iwlist wlp4s0 scan| grep --color=always "ESSID: *"|sort|uniq'
 alias espeak='espeak -ven-us+f3 -s 140'
 
 alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
+
+alias docker-image-purge='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
