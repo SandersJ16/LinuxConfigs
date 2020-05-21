@@ -3,7 +3,8 @@
 	[
 		"iterable",
 		"param",
-		"php"
+		"php",
+		"searchable"
 	],
 	"auto_match_enabled": false,
 	"close_windows_when_empty": true,
@@ -12,9 +13,16 @@
 	"font_size": 11,
 	"ignored_packages":
 	[
+		"0_package_control_loader",
 		"Vintage"
 	],
 	"indent_to_bracket": true,
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_brackets_square": false,
+	"match_tags": false,
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_line_endings": true,
