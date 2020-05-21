@@ -5,8 +5,14 @@ colours=white on_black bold
 -
 
 #table borders
-regexp=[+\-]+[+\-]|[|]
+#regexp=[+\-]+[+\-]|[|]
+regexp=[├┌└┴┬─┼+-]+[┐┤┘─┼+-]|[|│]
 colours=cyan on_black
+-
+
+#Postgres True and False
+regexp=\b(t(rue)?|f(alse)?)\b
+colours=red on_black
 -
 
 #data in ( ) and ' '
@@ -15,14 +21,20 @@ colours=green on_black
 -
 
 #numeric
-regexp=\s[\d\.]+\s*($|(?=\|))
+regexp=\s[\d\.]+\s*($|(?=[|│]))
 colours=yellow bold on_black
 -
 
 #date
-regexp=\d{4}-\d{2}-\d{2}
+regexp=\d{4}-\d{2}(-\d{2})?
 colours=blue bold on_black
 -
+
+#time (milliseconds)
+regexp=\d{2}:\d{2}:\d{2}\.\d+
+colours=cyan bold on_black
+-
+
 #time
 regexp=\d{2}:\d{2}:\d{2}
 colours=blue bold on_black
@@ -63,11 +75,23 @@ colours=white
 -
 
 #Variable Types
-regexp=\b(varchar|bigint|char|int|float|double|tinytext|text|mediumtext|longtext|blob|mediumblob|longblob|enum|set|decimal|date|datetime|timestamp|time|year)\b
+regexp=\b(varchar|bigint|char|int(eger)?|float|double|tinytext|text|mediumtext|longtext|blob|mediumblob|longblob|enum|set|decimal|date|datetime|timestamp|time|year|character varying|bool(ean)?|citext)\b
 colours=bold magenta on_black
 
 -
 
 #NULL
-regexp=NULL
+regexp=NULL|null
+colours=red bold on_black
+
+-
+
+#Keywords
+regexp=\b(nextval|PRIMARY KEY|UNIQUE|btree|\d+ rows)\b
+colours=yellow bold on_black
+
+-
+
+#Sizes
+regexp=\d+ [GkMm]B
 colours=red bold on_black
