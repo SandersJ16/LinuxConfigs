@@ -13,7 +13,7 @@ alias lh='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no |
 alias ld='ls --color=always -Xp | grep --color=always "/" | ccolumn'
 alias lhd='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | grep --color=no "/$" | ccolumn'
 alias lhf='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | grep -v --color=no "/$" | ccolumn'
-alias lss='ls -la | grep -oP --color=never "[\w.]+ -> /?[\w+.]+(/[\w+.]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
+alias lss='ls -la | grep -oP --color=never "(\S+|'[.*]') -> /?[^/]+(/[^/]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
 
 alias tree='tree -L 2'
 alias ltree='tree -L 2 -C|less -R'
@@ -70,6 +70,7 @@ alias signout='gnome-session-quit'
 alias whoareyou='echo $HOSTNAME'
 alias getmac='ifconfig | grep "HWaddr"'
 alias checknetwork='arp -a'
+alias smem='smem -tk --sort=command'
 
 alias version='lsb_release -a'
 alias changejava='sudo update-alternatives --config java'
