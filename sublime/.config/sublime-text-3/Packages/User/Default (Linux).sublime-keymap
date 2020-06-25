@@ -6,7 +6,9 @@
     { "keys": ["alt+shift+pageup"], "command": "move_to_neighboring_group", "args": {"forward": false} },
     { "keys": ["alt+shift+pagedown"], "command": "move_to_neighboring_group" },
 
-    { "keys": ["ctrl+shift+c"], "command": "copy_path" }
+    { "keys": ["ctrl+shift+c"], "command": "copy_path" },
+
+    { "keys": ["f1"], "command": "toggle_side_bar"}
 
     //Change ctrl to make movement use subwords as well
     //{ "keys": ["ctrl+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
