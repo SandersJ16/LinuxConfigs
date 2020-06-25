@@ -1,7 +1,7 @@
 # Developer Tool/IDE Files #
 ############################
 .tags
-.php-version
+.*.swp
 
 # Compiled source #
 ###################

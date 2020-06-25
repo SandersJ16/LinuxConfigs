@@ -3,6 +3,8 @@
     name = Justin L Sanders
 
 [alias]
+    undo-last-commit = reset --soft HEAD~1
+    log-graph = log --graph --decorate --pretty=oneline --abbrev-commit
     assume = update-index --assume-unchanged
     unassume = update-index --no-assume-unchanged
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
