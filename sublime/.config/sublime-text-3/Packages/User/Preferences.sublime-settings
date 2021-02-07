@@ -4,13 +4,17 @@
 		"iterable",
 		"param",
 		"php",
-		"searchable"
+		"searchable",
+		"Customizability",
+		"customizability",
+		"plugin",
+		"plugins"
 	],
 	"auto_match_enabled": false,
 	"close_windows_when_empty": true,
 	"color_scheme": "Monokai.sublime-color-scheme",
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 11,
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -21,7 +25,7 @@
 	"match_brackets_braces": false,
 	"match_brackets_content": false,
 	"match_brackets_square": false,
-	"match_tags": false,
+	"match_tags": true,
 	"show_encoding": true,
 	"show_full_path": true,
 	"show_git_status": false,
