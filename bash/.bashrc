@@ -166,3 +166,7 @@ if [ -s "${NVM_ROOT}/nvm.sh" ]; then
     source "${NVM_ROOT}/bash_completion"
   fi
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/justin/.sdkman"
+[[ -s "/home/justin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/justin/.sdkman/bin/sdkman-init.sh"
