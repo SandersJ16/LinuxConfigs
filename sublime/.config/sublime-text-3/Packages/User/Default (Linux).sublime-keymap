@@ -8,7 +8,14 @@
 
     { "keys": ["ctrl+shift+c"], "command": "copy_path" },
 
-    { "keys": ["f1"], "command": "toggle_side_bar"}
+    { "keys": ["f1"], "command": "toggle_side_bar"},
+
+    // { "keys": ["ctrl+alt+shift+n"], "command": "new_window" },
+    // { "keys": ["ctrl+shift+n"], "command": "new_window_for_project" },
+    { "keys": ["ctrl+alt+shift+n"], "command": "new_window_for_project" },
+
+
+    { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
 
     //Change ctrl to make movement use subwords as well
     //{ "keys": ["ctrl+left"], "command": "move", "args": {"by": "subwords", "forward": false} },

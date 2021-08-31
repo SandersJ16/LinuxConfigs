@@ -15,6 +15,8 @@ alias lhd='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no 
 alias lhf='ls -AX --color=always | grep -P "^(\x1b\[[^mK]*(m|K))?\." --color=no | grep -v --color=no "/$" | ccolumn'
 alias lss='ls -la | grep -oP --color=never "(\S+|'[.*]') -> /?[^/]+(/[^/]*)*$" | GREP_COLOR="01;36" grep -P --color=always "^.+(?= ->)" | ccolumn'
 
+alias highlight='ack --pasthru'
+
 alias tree='tree -L 2'
 alias ltree='tree -L 2 -C|less -R'
 
