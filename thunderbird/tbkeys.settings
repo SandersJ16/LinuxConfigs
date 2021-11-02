@@ -1,0 +1,5 @@
+{
+    "c": "var kNoRemoteContentPolicy = 0; var kBlockRemoteContent = 1; var kAllowRemoteContent = 2; var msgHdr = window.gMessageDisplay.displayedMessage; if (msgHdr) { var remoteContentPolicy = msgHdr.getUint32Property('remoteContentPolicy'); if (remoteContentPolicy == kBlockRemoteContent) { window.setMsgHdrPropertyAndReload('remoteContentPolicy', kAllowRemoteContent); } else if (remoteContentPolicy == kAllowRemoteContent) { window.setMsgHdrPropertyAndReload('remoteContentPolicy', kNoRemoteContentPolicy); } }",
+    ">": "if (window.gCurrentMode == 'mail') { window.content.focus(); }",
+    "<": "if (window.gCurrentMode == 'mail') { eval:window.threadTree.focus(); }"
+}
