@@ -83,3 +83,4 @@ alias espeak='espeak -ven-us+f3 -s 140'
 alias gbpurge='git branch --merged | grep -v "\*" | grep -v "master" | grep -v "develop" | grep -v "staging" | xargs -n 1 git branch -d'
 
 alias docker-image-purge='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
+alias wellspring='cd ~/Code/Wellspring && source wellspringrc'
