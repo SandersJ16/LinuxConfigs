@@ -1,0 +1,18 @@
+[submodule "scripts/cli-git-utils"]
+	path = scripts/cli-git-utils
+	url = git@github.com:SandersJ16/scripts__cli-git-utils
+[submodule "scripts/cron-utils"]
+	path = scripts/cron-utils
+	url = git@github.com:SandersJ16/scripts__cron-utils
+[submodule "scripts/cli-misc-utils"]
+	path = scripts/cli-misc-utils
+	url = git@github.com:SandersJ16/scripts__cli-misc-utils
+[submodule "scripts/cli-search-utils"]
+	path = scripts/cli-search-utils
+	url = git@github.com:SandersJ16/scripts__cli-search-utils
+[submodule "scripts/cli-docker-utils"]
+	path = scripts/cli-docker-utils
+	url = git@github.com:SandersJ16/scripts__cli-docker-utils
+[submodule "scripts/cli-dash-shims"]
+	path = scripts/cli-dash-shims
+	url = git@github.com:SandersJ16/scripts__cli-dash-shims
