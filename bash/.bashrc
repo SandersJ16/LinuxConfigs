@@ -167,6 +167,8 @@ if [ -s "${NVM_ROOT}/nvm.sh" ]; then
   fi
 fi
 
+export GH_CONFIG_DIR="$HOME"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/justin/.sdkman"
 [[ -s "/home/justin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/justin/.sdkman/bin/sdkman-init.sh"

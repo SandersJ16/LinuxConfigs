@@ -17,6 +17,10 @@
 
     { "keys": ["ctrl+shift+o"], "command": "prompt_open_folder" },
 
+    // Macros
+    { "keys": ["ctrl+alt+m"], "command": "toggle_record_macro" },
+    { "keys": ["ctrl+alt+shift+m"], "command": "run_macro" },
+
     //Change ctrl to make movement use subwords as well
     //{ "keys": ["ctrl+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
     //{ "keys": ["ctrl+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
