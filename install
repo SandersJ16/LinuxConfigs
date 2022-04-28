@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+
+usage() {
+    cat <<EOF
+Install 1 or more subdirectories
+Usage: install [-af] [INSTALL_DIRS]
+
+   -f           Force install over existing files
+   -a           Install all directories (INSTALL_DIRS will be ignored if this is passed)
+   -h, --help   displays basic help
+EOF
+}
+
+error() {
+    echo "Invalid option: $1" >&2
+    echo "Use -h or --help to see usage details" >&2
+}
+
+install_all=false
+force=false
+declare -a install_dirs
+while [ "$#" -gt 0 ]; do
+    OPTIND=1
+    while getopts ":hfa-" opt; do
+      case $opt in
+        h)
+          usage
+          exit 0
+          ;;
+        f)
+          force=true
+          ;;
+        a)
+          install_all=true
+          ;;
+        -) # Handle double dash elements
+          dd_option="${OPTARG%%=*}"
+          [[ "${OPTARG}" == *"="* ]] && dd_value="${OPTARG#*=}" || dd_value=""
+
+          case "$dd_option" in
+            help)
+              usage
+              exit 0
+              ;;
+            *)
+              error "--$OPTARG"
+              exit 1
+              ;;
+          esac
+          ;;
+        \?)
+          error "-$OPTARG"
+          exit 1
+          ;;
+      esac
+    done
+    shift $(($OPTIND - 1)) #remove processed arguments
+
+    # Continue looping through all arguments, store non options in $arguments array
+    # This allows us to place options after arguments but still use getopts to process them
+    while [[ "$#" -gt 0 ]] && [[ "${1:0:1}" != "-" ]]; do
+        install_dirs=("${install_dirs[@]}" "$1")
+        shift # remove processed arguments
+    done
+done
+
+if [ $install_all == true ]; then
+    for directory in *; do
+        if [ -d "$directory" ] && [ -f "$directory/install" ]; then
+            if [ force == true ]; then
+                ./"$directory"/install -f
+            else
+                ./"$directory"/install
+            fi
+        fi
+    done
+elif [ "${#install_dirs[@]}" -gt 0 ]; then
+    for directory in "${install_dirs[@]}"; do
+        if [ -d "$directory" ] && [ -f "$directory/install" ]; then
+            if [ force == true ]; then
+                ./"$directory"/install -f
+            else
+                ./"$directory"/install
+            fi
+        else
+            echo "SKIPPING $directory : Invalid Install directory"
+        fi
+    done
+else
+    echo "Must supply at least one install directory"
+    exit 1
+fi

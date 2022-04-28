@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Requires grc be installed https://github.com/garabik/grc
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd "$SCRIPT_DIR"
+source ../local_install.bash
+to_link=(".config" ".my.cnf" ".psqlrc")
+install "${to_link[@]}"
