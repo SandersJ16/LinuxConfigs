@@ -16,3 +16,6 @@
 [submodule "scripts/cli-dash-shims"]
 	path = scripts/cli-dash-shims
 	url = git@github.com:SandersJ16/scripts__cli-dash-shims
+[submodule "scripts/Bash-Better-Column-Command"]
+	path = scripts/Bash-Better-Column-Command
+	url = git@github.com-sandersj16:SandersJ16/Bash-Better-Column-Command.git
