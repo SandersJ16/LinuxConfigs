@@ -1,6 +1,6 @@
 [user]
-    email = sandersj1661@gmail.com
-    name = Justin L Sanders
+    email = sandersj1616@gmail.com
+    name = Justin Sanders
 
 [alias]
     undo-last-commit = reset --soft HEAD~1
@@ -10,11 +10,38 @@
     assumed = "!git ls-files -v | grep ^h | cut -c 3-"
     current = rev-parse --abbrev-ref HEAD
     setupstream = "!f() { git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD) $(git rev-parse --abbrev-ref HEAD); }; f"
+    add-updated = "!f() { git diff origin/main... --name-only | xargs git add; }; f"
+    
+    # Difftastic aliases, so `git dlog` is `git log` with difftastic and so on.
+    dlog = -c diff.external=difft log --ext-diff
+    dshow = -c diff.external=difft show --ext-diff
+    difft = -c diff.external=difft diff
+    sdifft = -c diff.external=difft diff
+    idifft = -c diff.external='difft --display=inline' diff
 
-[includeIf "gitdir:~/Code/Wellspring/**"]
-    path = ~/Code/Wellspring/.gitconfig
+[includeIf "gitdir:~/Code/Mahalo/**"]
+    path = ~/Code/Mahalo/.gitconfig
 
 [core]
     excludesfile = ~/.gitignore_global
     autocrlf = input
+    pager = delta
+    #pager = less -FX
 
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-proce
+
+# Delta Configs
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    line-numbers = true
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+    conflictStyle = zdiff3

@@ -2,5 +2,6 @@
 \pset linestyle unicode
 \pset border 2
 \pset pager always
+\pset null 'NULL'
 \setenv PAGER 'grcat ~/.config/grcat/grsql | less -RSFXin'
 

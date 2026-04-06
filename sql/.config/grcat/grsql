@@ -75,7 +75,7 @@ colours=white
 -
 
 #Variable Types
-regexp=\b(varchar|bigint|char|int(eger)?|float|double|tinytext|text|mediumtext|longtext|blob|mediumblob|longblob|enum|set|decimal|date|datetime|timestamp|time|year|character varying|bool(ean)?|citext)\b
+regexp=\b(varchar|bigint|char|int(eger)?|float|double|tinytext|text|mediumtext|longtext|blob|mediumblob|longblob|enum|set|decimal|date|datetime|timestamp|time|year|character varying|bool(ean)?|citext|uuid)\b
 colours=bold magenta on_black
 
 -
@@ -95,3 +95,22 @@ colours=yellow bold on_black
 #Sizes
 regexp=\d+ [GkMm]B
 colours=red bold on_black
+
+-
+
+#UUIDs
+regexp=[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}
+colours=white on_black
+
+-
+
+#SQL
+regexp=\b(PRIMARY KEY|UNIQUE|TABLE|CONSTRAINT|REFERENCES|FOREIGN KEY|ON (UPDATE|DELETE) (CASCADE|SET NULL|RESTRICT))\b
+colours=red bold on_black
+-
+regexp=(?<=ON UPDATE )(CASCADE|SET NULL|RESTRICT)\b
+colours=white bold on_black
+-
+regexp=(?<=ON DELETE )(CASCADE|SET NULL|RESTRICT)\b
+colours=white bold on_black
+
